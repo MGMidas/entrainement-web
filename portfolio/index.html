@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Jarvis Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <canvas id="particleCanvas"></canvas>
+</head>
+<body>
+
+    <header class="portfolio-header">
+        <div class="hud-container">
+            <div class="hud-bracket top-left"></div>
+            <div class="hud-bracket bottom-right"></div>
+            <div class="scan-line"></div>
+
+            <div class="content">
+                <span class="label">PORTFOLIO</span>
+                <h1 class="titre-portfolio">Fache Christophe</h1>
+                <div class="skills-row">
+                    <span>Developper Web</span> • <span>Designer</span> • <span>Modélisateur 3D</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<section class="projects-container">
+    
+    <div class="category-wrapper section-web">
+        <h2 class="section-title">PAGE_WEB</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h2 class="section-title">Réseau social Vizir</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./Page Web/project réseaux sociaux/Vizir - Accueil.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./Page Web/project réseaux sociaux/Vizir - Messages.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./Page Web/project réseaux sociaux/Vizir - Profil.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Réseau social Vizir</h3>
+                    <p class="project-desc">
+                        <strong>DESIGN :</strong> Identité visuelle réalisée sur Blender et IA.<br>
+                        <strong>INTERFACE :</strong> Focus sur l'esthétique futuriste et la fluidité de navigation.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">Blender</span><span class="badge">IA</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="project-card">
+                <h2 class="section-title">IA Local Web</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">                    
+                    <img src="./Page Web/IA local/Screenshot 2026-01-07 at 00-08-58 IA Locale.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Réseau social Vizir</h3>
+                    <p class="project-desc">
+                        <strong>OBJECTIF  :</strong> apprendre a créer un chat box avec un model open-source.<br>
+                        <strong>DESIGN :</strong> inspiré de chat-gpt<br>
+                    </p>
+                    <div class="tech-stack">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">ollama</span><span class="badge">IA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="section-title">Vizir Média</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./Page Web/Vizir Média/image.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./Page Web/Vizir Média/image1.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./Page Web/Vizir Média/image2.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Vizir Média</h3>
+                    <p class="project-desc">
+                        <strong>OBJECTIF :</strong> Regroupement de flux vidéos YouTube et Dailymotion.<br>
+                        <strong>TEST :</strong> Validation de connectivité via Ngrok.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">Ngrok</span><span class="badge">IA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-wrapper section-3d" style="margin-top: 50px;">
+        <h2 class="section-title">MODÉLISATION_3D</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <h2 class="section-title">Assets de Chantier</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./modélisation 3D/Assets de Chantier industriel/asset de chantier.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./modélisation 3D/Assets de Chantier industriel/asset de chantier1.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Chantier</h3>
+                    <p class="project-desc">
+                        <strong>BLENDER :</strong> Bibliothèque d'objets (échafaudages, bennes).<br>
+                        <strong>DÉTAILS :</strong> Modèles optimisés pour l'intégration de décors.
+                    </p>
+                    <div class="tech-stack"><span class="badge">Blender</span></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="section-title">Meuble</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./modélisation 3D/Meuble/evee.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./modélisation 3D/Meuble/cycles.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Meuble</h3>
+                    <p class="project-desc">
+                        <strong>BLENDER :</strong> mosélisation d'un meuble et d'un vase.<br>
+                        <strong>DÉTAILS :</strong> Modèles optimisés pour l'intégration de décors, tentative de texturé le mesh 3D.
+                    </p>
+                    <div class="tech-stack"><span class="badge">Blender</span></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="section-title">asset de cuisine</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./modélisation 3D/Asset de cuisine/asset de cuisine2.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./modélisation 3D/Asset de cuisine/asset de cuisine.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Cuisine</h3>
+                    <p class="project-desc"><strong>Blender :</strong> Frigo, Poêle, ustensiles.</p>
+                    <div class="tech-stack"><span class="badge">Blender</span></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="section-title">asset de salon</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./modélisation 3D/asset salon/asset salon.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./modélisation 3D/asset salon/asset salon1.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Salon</h3>
+                    <p class="project-desc"><strong>Blender :</strong> Télé, Meuble Télé, Canapé.</p>
+                    <div class="tech-stack"><span class="badge">Blender</span></div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h2 class="section-title">asset de meuble</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" onclick="moveSlide(-1, this)">❮</button>
+                    <button class="nav-btn" onclick="moveSlide(1, this)">❯</button>
+                </div>
+                <div class="project-image-gallery">
+                    <img src="./modélisation 3D/Meuble/meuble.png" class="project-img" onclick="openModal(this.src)">
+                    <img src="./modélisation 3D/Meuble/meuble1.png" class="project-img" onclick="openModal(this.src)">
+                </div>
+                <div class="project-info">
+                    <h3>Meubles</h3>
+                    <p class="project-desc"><strong>Blender :</strong> Création de rangements divers.</p>
+                    <div class="tech-stack"><span class="badge">Blender</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function moveSlide(direction, btn) {
+        const card = btn.closest('.project-card');
+        const gallery = card.querySelector('.project-image-gallery');
+        const images = gallery.querySelectorAll('.project-img');
+        
+        if (gallery.dataset.currentIndex === undefined) {
+            gallery.dataset.currentIndex = 0;
+        }
+
+        let index = parseInt(gallery.dataset.currentIndex) + direction;
+
+        if (index >= images.length) index = 0;
+        if (index < 0) index = images.length - 1;
+
+        gallery.dataset.currentIndex = index;
+        gallery.scrollTo({ left: gallery.clientWidth * index, behavior: 'smooth' });
+    }
+
+    function openModal(src) {
+        document.getElementById("imageModal").style.display = "block";
+        document.getElementById("fullImage").src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+</script>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="fullImage">
+</div>
+
+</body>
+</html>
