@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vizir - Connexion</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/inscription.css"> </head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Connexion</h2>
+            <p>Entrez vos identifiants pour accéder à Vizir.</p>
+            
+            <form action="connexion.php" method="POST">
+                <div class="input-group">
+                    <label>Pseudo</label>
+                    <input type="text" name="username" placeholder="Votre pseudo" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-auth">Se connecter</button>
+            </form>
+            
+            <div class="auth-footer">
+                Pas encore de compte ? <a href="inscription.html">S'inscrire</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

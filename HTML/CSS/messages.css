@@ -1,0 +1,182 @@
+/* ============================================================
+   MESSAGES.CSS - Design style Messagerie / TikTok
+   ============================================================ */
+
+/* 1. CONTENEUR PRINCIPAL */
+.messages-container {
+  display: flex;
+  height: calc(100vh - 80px); /* Toute la hauteur moins le header */
+  margin-top: 80px;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  position: fixed; /* Bloque le décor pour simuler une application */
+  width: 100%;
+}
+
+/* 2. COLONNE GAUCHE (LISTE DES CONTACTS) */
+.chat-list {
+  width: 350px;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.list-header h2 {
+  padding: 25px 20px; /* Espace pour que "Messages" soit bien placé */
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-list-content {
+  flex: 1;
+  overflow-y: auto; /* Seule la liste défile */
+}
+
+/* --- STYLE DES CONTACTS (AMÉLIORÉ) --- */
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact:hover, .contact.active {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact.active {
+  border-left: 4px solid #ff0000;
+}
+
+.contact-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(45deg, #ff0000, #0055ff);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.contact-preview {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5); /* Message en gris discret */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute "..." si le texte est long */
+}
+
+/* 3. COLONNE DROITE (FENÊTRE DE CHAT) */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 25px 20px; /* Espace pour que "Support Vizir" soit bien placé */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+}
+
+/* Bulles de messages */
+.msg {
+  max-width: 70%;
+  padding: 12px 18px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.received {
+  background: rgba(255, 255, 255, 0.1);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.sent {
+  background: #ff0000;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+/* Zone de saisie en bas */
+.chat-input-area {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.chat-input-area input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 12px 20px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.chat-input-area input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.send-btn:hover {
+  transform: scale(1.1);
+}
